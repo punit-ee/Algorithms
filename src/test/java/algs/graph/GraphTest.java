@@ -43,7 +43,7 @@ class GraphTest {
     @Test
     void shouldCreateGraphFromFile() throws URISyntaxException, IOException {
         Graph graph = new Graph( File.separator + "tinyG.txt");
-        URI uri = getClass().getResource(File.separator + "tinyGraph.txt").toURI();
+        URI uri = getClass().getResource( "/tinyGraph.txt").toURI();
         String expected = new String(Files.readAllBytes(Paths.get(uri)));
         assertEquals(expected, graph.toString());
     }
